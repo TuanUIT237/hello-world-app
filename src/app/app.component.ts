@@ -20,9 +20,5 @@ export class AppComponent {
   title = 'hello-world-app';
 
   constructor(private user:UserService){
-    
-    this.user.getData().subscribe({data=>
-      
-    })
   }
 }
