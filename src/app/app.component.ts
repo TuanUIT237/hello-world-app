@@ -1,14 +1,28 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [
+    CommonModule, 
+    RouterOutlet,
+    HttpClient
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'hello-world-app';
+
+  constructor(private user:UserService){
+    
+    this.user.getData().subscribe({data=>
+      
+    })
+  }
 }

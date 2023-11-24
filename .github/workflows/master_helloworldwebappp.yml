@@ -24,8 +24,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm run build --prod
+        working-directory: .
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'helloworldwebappp'
           slot-name: 'Production'
-          package: .
+          package: ./dist/hello-world-app
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D546102CCC74D65B13CDAB3B903D71D }}
