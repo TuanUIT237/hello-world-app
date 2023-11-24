@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from './user.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { UserService } from './user.service';
   imports: [
     CommonModule, 
     RouterOutlet,
-    HttpClientModule
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -18,7 +18,4 @@ import { UserService } from './user.service';
 
 export class AppComponent {
   title = 'hello-world-app';
-
-  constructor(private user:UserService){
-  }
 }
