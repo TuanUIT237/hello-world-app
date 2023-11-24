@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'helloworldwebappp'
           slot-name: 'Production'
-          package: ./dist/hello-world-app
+          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D546102CCC74D65B13CDAB3B903D71D }}
